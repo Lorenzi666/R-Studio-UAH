@@ -1,0 +1,111 @@
+{
+    "sources": [
+        {
+            "DOI": "10.1093/ser/mwy051",
+            "ISSN": "1475-1461, 1475-147X",
+            "abstract": "Abstract Inequality is on the rise: gains have been concentrated with a small elite, while most have seen their fortunes stagnate or fall. Despite what scholars and journalists consider a worrying trend, there is no evidence of growing popular concern about inequality. In fact, research suggests that citizens in unequal societies are less concerned than those in more egalitarian societies. How to make sense of this paradox? I argue that citizens’ consent to inequality is explained by their growing conviction that societal success is reflective of a meritocratic process. Drawing on 25 years of International Social Survey Program data, I show that rising inequality is legitimated by the popular belief that the income gap is meritocratically deserved: the more unequal a society, the more likely its citizens are to explain success in meritocratic terms, and the less important they deem nonmeritocratic factors such as a person’s family wealth and connections.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2024,
+                        3,
+                        19
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Mijs",
+                    "given": "Jonathan J B"
+                }
+            ],
+            "container-title": "Socio-Economic Review",
+            "id": "mijsParadoxInequalityIncome2021",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        7
+                    ]
+                ]
+            },
+            "language": "en-US",
+            "page": "7-35",
+            "title": "The paradox of inequality: Income inequality and belief in meritocracy go hand in hand",
+            "title-short": "The paradox of inequality",
+            "type": "article-journal",
+            "volume": "19"
+        },
+        {
+            "DOI": "10.1111/ecpo.12103",
+            "abstract": "Abstract A vast literature suggests that economic inequality has important consequences for politics and public policy. Higher inequality is thought to increase demand for income redistribution in democracies and to discourage democratization and promote class conflict and revolution in dictatorships. Most such arguments crucially assume that ordinary people know how high inequality is, how it has been changing, and where they fit in the income distribution. Using a variety of large, cross-national surveys, we show that, in recent years, ordinary people have had little idea about such things. What they think they know is often wrong. Widespread ignorance and misperceptions emerge robustly, regardless of data source, operationalization, and measurement method. Moreover, perceived inequality—not the actual level—correlates strongly with demand for redistribution and reported conflict between rich and poor. We suggest that most theories about political effects of inequality need to be reframed as theories about effects of perceived inequality.",
+            "annote": "MAG ID: 4239824068",
+            "author": [
+                {
+                    "literal": "Vladimir Gimpelson"
+                },
+                {
+                    "literal": "Vladimir Gimpelson"
+                },
+                {
+                    "literal": "Daniel Treisman"
+                },
+                {
+                    "family": "Treisman",
+                    "given": "Daniel"
+                }
+            ],
+            "container-title": "Economics and Politics",
+            "id": "vladimirgimpelsonMisperceivingInequality",
+            "title": "Misperceiving inequality",
+            "type": "article-journal"
+        },
+        {
+            "DOI": "10.1016/j.jpubeco.2012.10.009",
+            "author": [
+                {
+                    "family": "Guillermo Cruces"
+                },
+                {
+                    "family": "Cruces",
+                    "given": "Guillermo"
+                },
+                {
+                    "family": "Ricardo Pérez-Truglia"
+                },
+                {
+                    "family": "Truglia",
+                    "given": "Ricardo Nicolas Perez"
+                },
+                {
+                    "family": "Perez-Truglia",
+                    "given": "Ricardo"
+                },
+                {
+                    "family": "Martín Tetaz"
+                },
+                {
+                    "family": "Tetaz",
+                    "given": "Martin"
+                }
+            ],
+            "container-title": "Journal of Public Economics",
+            "id": "guillermocruces2013",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "note": "DOI: 10.1016/j.jpubeco.2012.10.009 MAG ID: 3122013459",
+            "page": "100-112",
+            "title": "Biased perceptions of income distribution and preferences for redistribution: Evidence from a survey experiment ☆",
+            "title-short": "Biased perceptions of income distribution and preferences for redistribution",
+            "type": "article-journal",
+            "volume": "98"
+        }
+    ],
+    "project_biblios": []
+}
