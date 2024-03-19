@@ -1,0 +1,34 @@
+---
+title: "Trabajo1"
+format: html
+editor: visual
+bibliography: percepcion-desigualdad.bib
+link-citations: true
+---
+
+# Trabajo 1
+
+Por: Benjamin Lorenzi
+
+## Introduccion
+
+En este trabajo analizaremos las determinadas caracteristicas y datos que han salido a la luz de los datos recolectados... (vladimirgimpelsonMisperceivingInequality)
+
+insert-\> Citation (vladimirgimpelsonMisperceivingInequality)
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+You can add options to executable code like this
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
