@@ -14,7 +14,7 @@ Por: Benjamin Lorenzi
 
 En este trabajo analizaremos las determinadas caracteristicas y datos que han salido a la luz de los datos recolectados... [@vladimirgimpelsonMisperceivingInequality]
 
-La investigación sobre percepción de desigualdad económica ha tenido un auge durante los últimos años [@mijsParadoxInequalityIncome2021, ver tambien @vladimirgimpelsonMisperceivingInequality, y @guillermocrucesBiasedPerceptionsIncome2013]
+La investigación sobre percepción de desigualdad económica ha tenido un auge durante los últimos años [@mijsParadoxInequalityIncome2021]
 
 ## Running Code
 
