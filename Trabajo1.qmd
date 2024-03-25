@@ -1,9 +1,11 @@
 ---
 title: "Trabajo1"
-format: html
 editor: visual
 bibliography: Universidad.bib
 link-citations: true
+format:
+  html:
+    theme: cyborg
 ---
 
 # Impacto de las Políticas Educativas en la Desigualdad Social y la Cohesión en Chile
@@ -26,21 +28,4 @@ Respecto a lo anterior @barbaranorambuenasilvaPoliticasEducativasChile2023 seña
 
 Ahora bien ¿qué pasa en la actualidad? Actualmente nos encontramos en el mismo sistema educativo con una lógica de mercado, que ha pasado al mismo tiempo que todos estos procesos una serie de hechos sociales muy significativos para la sociedad chilena, como por ejemplo un estallido social, una pandemia, y a día de hoy olas migratorias, todo esto en tan solo cinco años. Autoras como @luciaandersonCOVID19TICRuptura2022 plantean que la desigualdad y la vulnerabilidad social se hicieron más latentes en la crisis de la pandemia debido a las debilidades de las políticas educativas a nivel mundial. Por esta misma razón es que se vuelve relevante estudiar el impacto de las políticas educativas en la desigualdad y la cohesión social a dia de hoy considerando estos hechos sociales que terminaron por configurar un impacto en la sociedad chilena. Para ello como hipótesis planteamos que a medida que pasa el tiempo y no se implementan políticas educativas efectivas mayor será la desigualdad social y por ende menos la cohesión social. Para ello utilizaremos datos de CASEN 2022 para medir niveles de desigualdad, SIMCE para analizar brechas educativas y Estudio Longitudinal Social de Chile para explorar percepciones de cohesión social. 
 
-Conceptos Claves: Desigualdad Social, Cohesión Social, Políticas educativas. 
-
-# ![](images/images.jpg)
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{r}
-1 + 1
-```
-
-You can add options to executable code like this
-
-```{r}
-#| echo: true
-2 * 2
-```
+#### Conceptos Claves: Desigualdad Social, Cohesión Social, Políticas educativas.
