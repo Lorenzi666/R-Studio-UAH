@@ -1,13 +1,12 @@
 ---
 title: "Trabajo1"
+format:
+  html:
+    theme:
+      dark: darkly
 editor: visual
 bibliography: Universidad.bib
 link-citations: true
-format:
-  html:
-    theme: cyborg
-    fontsize: 1.1em
-    linestretch: 1.7
 ---
 
 # Impacto de las Políticas Educativas en la Desigualdad Social y la Cohesión en Chile
