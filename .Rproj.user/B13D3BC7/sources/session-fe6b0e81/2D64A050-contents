@@ -1,0 +1,374 @@
+
+
+#   ╔═══════════════════════════════════════════╗
+#   ║                                           ║
+#   ║       * Taller 1: Introducción a R        ║
+#   ║    Como herramienta para la estadística*  ║
+#   ║                                           ║
+#   ║              Estadística III              ║
+#   ║                                           ║
+#   ║                                           ║
+#   ║   -Patricio Alarcón                       ║
+#   ║   -Lucas Galanakis         20/03/2024     ║
+#   ║                                           ║
+#   ╚═══════════════════════════════════════════╝
+
+
+
+### Consideraciones ------------------------------------------------------------
+
+# Los # sirven para realizar anotaciones en el script. De otra forma,
+# el programa identifica como código el texto.
+
+
+
+### Lo basico para partir ------------------------------------------------------
+
+print("Buenos días, estudiantes de Sociología :)")
+
+
+## Proyectos en R Studio
+
+# Asignar el proyecto a una carpeta
+
+  # 1. Creamos una carpeta en el escritorio (que se llame Nombre_Apellido_T1)
+
+  # 2. Clic en el boton de la caja azul (esquina superior izquierda)
+
+  # 3. Seleccionamos "existing directory" y luego "browse" para buscar la carpeta
+
+  # Al abrir un archivo R project, R identifica la carpeta que lo contiene como
+  # el directorio de trabajo. Así, no tenemos que señalarla manualmente.
+
+
+
+### Objetos en R ---------------------------------------------------------------
+
+#Recordar que, R es un lenguaje orientado a objetos. Por lo que, todas las funciones,
+#u operaciones que queramos realizar serán sobre dichos objetos. Estos objetos se
+#diferencian según su tipo. Pueden ser numéricos, character, factor, y lógicos.
+#dependiendo del tipo de objeto, se pueden realizar una u otra función u operación.
+
+7+2
+
+suma <- 4+3
+suma
+
+mensaje <- print("Buenos días estudiantes")
+mensaje
+
+x <- 6+2
+y <- 3+1
+
+z <- x / y
+
+z
+
+3*z
+
+### Operaciones logicas --------------------------------------------------------
+
+x < y
+
+x > y
+
+z == 2
+
+5 == z
+
+
+
+### Vectores -------------------------------------------------------------------
+
+#Los vectores son conjuntos de objetos del mismo tipo. Son objetos más complejos
+#que permiten realizar algunas operaciones más complejas.
+
+## Antes de seguir, limpiamos el ambiente:
+rm(list=(ls()))
+
+
+## Vector Numeric
+
+# Crear el vector
+edad <- c(18, 23, 21, 22, 22, 31, 34, NA, 71, 25, 29, NA, 26, 20, 81)
+
+# Revisar el tipo de dato
+class(edad)
+
+# Resumen general
+summary(Edad)
+
+summary(edad)
+
+## Operaciones con vectores numericos
+
+edad
+
+edad / 2
+
+edad2030 <- edad + 6
+
+edad2030
+
+
+## Vector de caracter
+
+# Crear el vector
+genero <- c("M","M","H","NB","M","NB","H","H","M","H","H","M","M","H","NB")
+
+# Revisar el tipo de dato
+class(genero)
+
+
+## Vector de tipo factor
+
+# Crear el vector
+pol <- c("1","3","1","2","2","3","2","2","3","1","2","3","1","2","1")
+
+
+# Etiquetar los valores (crear un factor)
+pospol <- factor(pol, labels = c("izq", "cen", "der"), levels = c(1:3))
+
+# Revisar el tipo de dato
+class(pospol)
+
+# Resumen (No muy util)
+table(pol)
+
+table(pospol)
+
+
+
+### Seleccionar objetos --------------------------------------------------------
+
+#Dado que los vectores son objetos más complejos y se acercan más a lo que luego
+#vendría ser una base de datos, vamos a repasar operaciones de búsqueda dentro de un
+#vector. Esta lógica se puede replicar en las bases de datos a fin de, por ejemplo,
+#excluir casos.
+
+# Revisamos el vector
+edad
+
+# Septimo elemento de la lista
+edad[7]
+
+# Primeros 4 elementos
+genero[1:4]
+
+# Elementos especificos
+pospol[c(4, 8, 15)]
+
+# Iguales a 22
+edad[edad==22]
+
+
+
+### Data Frame / Base de Datos -------------------------------------------------
+
+#Como sabrán hasta este punto, normalmente uno utiliza bases de datos para cualquier
+#análisis o investigación que querramos hacer para nuestros fines. Hoy veremos
+#como armar una base de datos con los vectores que formamos. Sin embargo, lo común
+#es cargarla ya estructurada con las funciones dependiendo del tipo de archivo que sea.
+#Eso lo veremos la próxima sesión de ayudantía.
+
+
+## Crear una base mediante una funcion
+base <- data.frame(edad2030, genero, pospol) #unimos los dos vectores que construimos.
+
+# Ver los nombres de las variables
+colnames(base)
+
+# Cambiar nombres
+colnames(base) <- c("edad", "genero", "pospol")
+
+# Revisamos
+colnames(base)
+
+
+## Seleccionar variables usando el operador $
+
+#Esto es lo fundamental para luego, aplicar operaciones sobre una u otra variable.
+#Recordar que, dependiendo del tipo de datos, se pueden aplicar una u otra función
+#a las variables. No podemos calcular la media de un objeto tipo texto, ni tampoco
+#sería util ver las frecuencias de una variable numérica.
+
+base$pospol
+
+
+## Seleccionar objetos de la base usando corchetes []
+
+# Toda la primera columa
+base[1]
+
+# Toda la primera fila
+base[,1]
+
+# Seleccionar el caso de la primera fila y la primera columna
+base[1,1]
+
+# Primeros 5 casos de ambas columnas -> (Con 3 o mas columnas esto tendria mas sentido)
+base[1:5, c(1,2)]
+
+
+
+### Funciones utiles -----------------------------------------------------------
+
+
+## Para trabajar con Bases de Datos
+head(base) #nos da información sobre los primeros casos de la base de datos
+View(base) #exploramos nuestra base de datos
+str(base) #conocer la estructura de los datos (preferentemente trabajar con variables)
+table(base$edad) #nos organiza en una tabla de frecuencias la variable seleccionada.
+
+
+## Pedir ayuda sobre alguna funcion
+?table
+
+?head
+
+
+
+### Estadisticos descriptivos --------------------------------------------------
+
+#Pensemos que necesitamos realizar una tabla descriptiva univariada y otra bivariada
+#con los datos que creamos.
+#Para ello, decidimos manejar los datos usando dplyr y tidyr, usando flextable
+#para crear las tablas en formato academico. 
+
+#Debemos instalar y cargar las funciones de estos dos paquetes.
+
+## Instalar paquetes
+#Esto es necesario solo 1 vez por computador
+
+install.packages("dplyr")
+install.packages("sjmisc")
+install.packages("moments")
+install.packages("flextable")
+
+
+## Cargar las funciones de los paquetes
+#Estos se hace cada vez que abrimos R Studio
+
+library(dplyr)
+library(sjmisc)
+library(moments)
+library(flextable)
+
+
+## Estadisticos Univariados
+
+#Revisaremos dos formas de obtener descriptivos. Con funciones del paquete base,
+#moments, y con funciones de sjmisc.
+
+#Paquete base
+
+mean(base$edad, na.rm = T)
+median(base$edad, na.rm = T)
+sd(base$edad, na.rm = T)
+
+##El paquete base es bien limitado en sus descriptivos, por ejemplo no viene incluida
+#una función para calcular curtosis y asimetría. Por lo que el paquete moments nos
+#sirve para obtener dicha información.
+
+skewness(base$edad, na.rm = T)
+kurtosis(base$edad, na.rm = T)
+
+#Para calcular frecuencias para variables nominales y ordinales debemos hacer un rodeo
+#calcular la proporcion, y luego multiplicar por 100 dicha función
+
+prop.table(table(base$genero))
+
+100*prop.table(table(base$genero))
+
+#Paquete sjmisc
+
+#Con el paquete sjmisc dichas operaciones son más simples. Con una función según
+#el tipo de variable obtenemos la información anterior:
+
+descr(base$edad)
+frq(base$genero)
+
+#Ahora bien, esta no es la unica manera. El gran problema que tenemos es que
+#ninguna de estas tablas queda con formato APA (requerido tanto para evaluaciones
+#del curso como para publicaciones académicas)
+
+#Veamos una tabla de frecuencia y proporcion de la variable pospol
+
+#Aqui pasamos a concatenar funciones con el "pipe" del paquete magritte, que está
+#contenido en Dplyr. El pipe nos permite hacer cadenas de funciones sin sobreescribir el
+#objeto original sobre el cual aplicamos dichas funciones. De otra forma, habria que
+#crear objeto por objeto hasta llegar a una tabla. La lógica es ir paso a paso
+#concatenando funciones. 
+
+tabla1 <- base %>% 
+  group_by(pospol) %>% 
+  summarise(freq = n(),
+            prop = round(freq * 100 / nrow(.),1))
+
+tabla1_apa = flextable(tabla1)
+
+# La tabla en formato R pasa a formato flextable, similar al formato académico
+
+tabla1_apa
+
+
+## Estadisticos Bivariados
+#Tabla con estadisticos descriptivos de la edad, agrupando por genero
+
+tabla2 <- base %>% 
+  group_by(genero) %>% 
+  summarise(Promedio = mean(edad, na.rm = T),
+            Sd = sd(edad, na.rm = T),
+            Minimo = min(edad, na.rm = TRUE),
+            Q25 = quantile(edad, 0.25, na.rm = TRUE),
+            Mediana = quantile(edad, 0.5, na.rm = TRUE),
+            Q75 = quantile(edad, 0.75, na.rm = TRUE),
+            Maximo = max(edad, na.rm = TRUE),
+            n=n())
+  
+
+# Pasamos a formato flextable
+tabla2_apa <- flextable(tabla2)
+
+tabla2_apa
+
+### Personalizar las tablas de flextable
+
+#Como pueden ver en el visualizador, la tabla no se encuestra en formato academico.
+#Usando el objeto tabla2_apa, podemos personalizarla y agregar lo que falta.
+
+tabla2_apa <- tabla2_apa %>% 
+  add_footer_lines("Fuente: Elaboración propia") %>% 
+  set_caption("Tabla 2: Descriptivos de la variable edad") %>% 
+  width(j=c(1:8), width=0.7)
+
+
+tabla2_apa
+
+
+### Guardar una Base de Datos --------------------------------------------------
+
+#Es posible guardar la base de datos con la finalidad de seguir editando o evaluaciones.
+#Ello se hace con la funcion "save" del paquete base. Se indica el objeto a guardar
+#y el directorio de destino.
+
+save(base, file = "base")
+
+# Siempre debemos poner atencion al formato/tipo de archivo que estamos creando
+
+## Guardar BIEN una base de datos
+save(base, file = "Output/base.RData")
+
+### Guardar las tablas flextable
+
+##Formato HTML:
+  
+  save_as_html(tabla2_apa, path = "Output/Nombre_Archivo.html")
+
+##Formato Docx:
+  
+  save_as_docx(tabla2_apa, path = "Output/Nombre_Archivo.docx")
+
+##Formato png (imagen):
+  
+  save_as_image(tabla2_apa, path = "Output/Nombre_Archivo.png")
